@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Methods</title>
+</head>
+<body>
+
+  <h2>JavaScript Array Methods </h2>
+  <pre id="output"></pre>
+
+  <script>
+    const output = document.getElementById('output');
+
+    // Initial array
+    let numbers = [1, 2, 3, 4, 5];
+    let result = 'Initial array: ' + JSON.stringify(numbers) + '\n\n';
+
+    // push() - Add item to end
+    numbers.push(6);
+    result += 'After push(6): ' + JSON.stringify(numbers) + '\n';
+
+    // pop() - Remove item from end
+    numbers.pop();
+    result += 'After pop(): ' + JSON.stringify(numbers) + '\n';
+
+    // unshift() - Add item to beginning
+    numbers.unshift(0);
+    result += 'After unshift(0): ' + JSON.stringify(numbers) + '\n';
+
+    // shift() - Remove item from beginning
+    numbers.shift();
+    result += 'After shift(): ' + JSON.stringify(numbers) + '\n';
+
+    // map() - Create a new array by multiplying each item by 2
+    const doubled = numbers.map(n => n * 2);
+    result += 'After map(n * 2): ' + JSON.stringify(doubled) + '\n';
+
+    // filter() - Filter out numbers greater than 2
+    const filtered = numbers.filter(n => n > 2);
+    result += 'After filter(n > 2): ' + JSON.stringify(filtered) + '\n';
+
+    // reduce() - Sum all numbers
+    const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+    result += 'Sum using reduce(): ' + sum + '\n';
+
+    // forEach() - Log each number (also builds a string here)
+    let forEachOutput = '';
+    numbers.forEach(n => { forEachOutput += n + ' '; });
+    result += 'forEach(): ' + forEachOutput + '\n';
+
+    // slice() - Extract part of the array (from index 1 to 3)
+    const sliced = numbers.slice(1, 4);
+    result += 'After slice(1, 4): ' + JSON.stringify(sliced) + '\n';
+
+    // splice() - Remove and replace elements (start at index 2, remove 1, insert 99)
+    numbers.splice(2, 2, 99, 100);
+    result += 'After splice(2, 2, 99, 100): ' + JSON.stringify(numbers) + '\n';
+
+    // Display all results
+    output.textContent = result;
+  </script>
+
+</body>
+</html>

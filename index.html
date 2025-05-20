@@ -1,13 +1,122 @@
+</body>
+</html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Array Methods</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Array Methods</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>JavaScript Array Methods</h1>
+    <div class="subtitle">Modern JavaScript Array Manipulation</div>
+  </header>
 
-  <h2>JavaScript Array Methods </h2>
-  <pre id="output"></pre>
+  <main>
+    <div class="interactive-demo">
+      <h2>Live Demo</h2>
+      <pre id="output"></pre>
+    </div>
+
+    <div class="method-container">
+      <div class="method-card">
+        <h3 class="method-name">push()</h3>
+        <div class="method-tags">
+          <span class="tag mutates">Mutates Array</span>
+        </div>
+        <p class="method-description">Adds one or more elements to the end of an array and returns the new length.</p>
+        <div class="code-output">array.push(element);</div>
+      </div>
+
+      <div class="method-card">
+        <h3 class="method-name">pop()</h3>
+        <div class="method-tags">
+          <span class="tag mutates">Mutates Array</span>
+        </div>
+        <p class="method-description">Removes the last element from an array and returns that element.</p>
+        <div class="code-output">const lastItem = array.pop();</div>
+      </div>
+
+      <div class="method-card">
+        <h3 class="method-name">unshift()</h3>
+        <div class="method-tags">
+          <span class="tag mutates">Mutates Array</span>
+        </div>
+        <p class="method-description">Adds one or more elements to the beginning of an array and returns the new length.</p>
+        <div class="code-output">array.unshift(element);</div>
+      </div>
+
+      <div class="method-card">
+        <h3 class="method-name">shift()</h3>
+        <div class="method-tags">
+          <span class="tag mutates">Mutates Array</span>
+        </div>
+        <p class="method-description">Removes the first element from an array and returns that element.</p>
+        <div class="code-output">const firstItem = array.shift();</div>
+      </div>
+
+      <div class="method-card">
+        <h3 class="method-name">map()</h3>
+        <div class="method-tags">
+          <span class="tag returns-new">Returns New Array</span>
+        </div>
+        <p class="method-description">Creates a new array with the results of calling a function on every element.</p>
+        <div class="code-output">const newArray = array.map(item => item * 2);</div>
+      </div>
+
+      <div class="method-card">
+        <h3 class="method-name">filter()</h3>
+        <div class="method-tags">
+          <span class="tag returns-new">Returns New Array</span>
+        </div>
+        <p class="method-description">Creates a new array with elements that pass the test in a testing function.</p>
+        <div class="code-output">const filtered = array.filter(item => item > 2);</div>
+      </div>
+
+      <div class="method-card">
+        <h3 class="method-name">reduce()</h3>
+        <div class="method-tags">
+          <span class="tag returns-new">Returns Value</span>
+        </div>
+        <p class="method-description">Applies a function against an accumulator and each element to reduce to a single value.</p>
+        <div class="code-output">const sum = array.reduce((acc, curr) => acc + curr, 0);</div>
+      </div>
+
+      <div class="method-card">
+        <h3 class="method-name">forEach()</h3>
+        <div class="method-tags">
+          <span class="tag">Iteration</span>
+        </div>
+        <p class="method-description">Executes a provided function once for each array element.</p>
+        <div class="code-output">array.forEach(item => console.log(item));</div>
+      </div>
+
+      <div class="method-card">
+        <h3 class="method-name">slice()</h3>
+        <div class="method-tags">
+          <span class="tag returns-new">Returns New Array</span>
+        </div>
+        <p class="method-description">Returns a shallow copy of a portion of an array into a new array.</p>
+        <div class="code-output">const portion = array.slice(1, 3);</div>
+      </div>
+
+      <div class="method-card">
+        <h3 class="method-name">splice()</h3>
+        <div class="method-tags">
+          <span class="tag mutates">Mutates Array</span>
+        </div>
+        <p class="method-description">Changes array content by removing/replacing elements and/or adding new elements.</p>
+        <div class="code-output">array.splice(index, howMany, ...elementsToAdd);</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>JavaScript Array Methods | Modern Web Development</p>
+  </footer>
 
   <script>
     const output = document.getElementById('output');

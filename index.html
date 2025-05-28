@@ -1,174 +1,216 @@
-</body>
-</html>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Array Methods</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>StepUp - Premium Sneaker Store</title>
+  <link rel="stylesheet" href="styles/styles.min.css" />
 </head>
 <body>
   <header>
-    <h1>JavaScript Array Methods</h1>
-    <div class="subtitle">Modern JavaScript Array Manipulation</div>
+    <div class="header-content">
+      <div class="logo">StepUp</div>
+      <nav>
+        <a href="#featured">Featured</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div class="interactive-demo">
-      <h2>Live Demo</h2>
-      <pre id="output"></pre>
-    </div>
-
-    <div class="method-container">
-      <div class="method-card">
-        <h3 class="method-name">push()</h3>
-        <div class="method-tags">
-          <span class="tag mutates">Mutates Array</span>
-        </div>
-        <p class="method-description">Adds one or more elements to the end of an array and returns the new length.</p>
-        <div class="code-output">array.push(element);</div>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>StepUp</h1>
+        <h2>Walk Into Excellence</h2>
+        <p>Discover our curated collection of premium sneakers from the world's most iconic brands.</p>
+        <button class="cta-button">Shop Now</button>
       </div>
+    </section>
 
-      <div class="method-card">
-        <h3 class="method-name">pop()</h3>
-        <div class="method-tags">
-          <span class="tag mutates">Mutates Array</span>
+    <section id="featured" class="featured-section">
+      <h2>Featured Sneakers</h2>
+      <div class="sneaker-container">
+        <div class="sneaker-card featured">
+          <div class="sneaker-image">👟</div>
+          <h3 class="sneaker-name">Air Max Revolution</h3>
+          <div class="sneaker-tags">
+            <span class="tag limited">Limited Edition</span>
+            <span class="tag trending">Trending</span>
+          </div>
+          <p class="sneaker-description">Revolutionary comfort meets iconic style in this premium athletic sneaker.</p>
+          <div class="price-section">
+            <span class="price">$189.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
         </div>
-        <p class="method-description">Removes the last element from an array and returns that element.</p>
-        <div class="code-output">const lastItem = array.pop();</div>
-      </div>
 
-      <div class="method-card">
-        <h3 class="method-name">unshift()</h3>
-        <div class="method-tags">
-          <span class="tag mutates">Mutates Array</span>
+        <div class="sneaker-card">
+          <div class="sneaker-image">👟</div>
+          <h3 class="sneaker-name">Street Runner Pro</h3>
+          <div class="sneaker-tags">
+            <span class="tag new">New Arrival</span>
+          </div>
+          <p class="sneaker-description">Perfect blend of performance and street style for urban adventurers.</p>
+          <div class="price-section">
+            <span class="price">$149.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
         </div>
-        <p class="method-description">Adds one or more elements to the beginning of an array and returns the new length.</p>
-        <div class="code-output">array.unshift(element);</div>
-      </div>
 
-      <div class="method-card">
-        <h3 class="method-name">shift()</h3>
-        <div class="method-tags">
-          <span class="tag mutates">Mutates Array</span>
+        <div class="sneaker-card">
+          <div class="sneaker-image">👟</div>
+          <h3 class="sneaker-name">Classic Court</h3>
+          <div class="sneaker-tags">
+            <span class="tag bestseller">Best Seller</span>
+          </div>
+          <p class="sneaker-description">Timeless design that never goes out of style, perfect for any occasion.</p>
+          <div class="price-section">
+            <span class="price">$129.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
         </div>
-        <p class="method-description">Removes the first element from an array and returns that element.</p>
-        <div class="code-output">const firstItem = array.shift();</div>
-      </div>
 
-      <div class="method-card">
-        <h3 class="method-name">map()</h3>
-        <div class="method-tags">
-          <span class="tag returns-new">Returns New Array</span>
+        <div class="sneaker-card">
+          <div class="sneaker-image">👟</div>
+          <h3 class="sneaker-name">Trail Blazer X</h3>
+          <div class="sneaker-tags">
+            <span class="tag outdoor">Outdoor</span>
+          </div>
+          <p class="sneaker-description">Built for adventure with superior grip and all-weather protection.</p>
+          <div class="price-section">
+            <span class="price">$199.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
         </div>
-        <p class="method-description">Creates a new array with the results of calling a function on every element.</p>
-        <div class="code-output">const newArray = array.map(item => item * 2);</div>
-      </div>
 
-      <div class="method-card">
-        <h3 class="method-name">filter()</h3>
-        <div class="method-tags">
-          <span class="tag returns-new">Returns New Array</span>
+        <div class="sneaker-card">
+          <div class="sneaker-image">👟</div>
+          <h3 class="sneaker-name">Elite Performance</h3>
+          <div class="sneaker-tags">
+            <span class="tag sport">Sport</span>
+          </div>
+          <p class="sneaker-description">Professional-grade athletic shoe designed for peak performance.</p>
+          <div class="price-section">
+            <span class="price">$249.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
         </div>
-        <p class="method-description">Creates a new array with elements that pass the test in a testing function.</p>
-        <div class="code-output">const filtered = array.filter(item => item > 2);</div>
-      </div>
 
-      <div class="method-card">
-        <h3 class="method-name">reduce()</h3>
-        <div class="method-tags">
-          <span class="tag returns-new">Returns Value</span>
+        <div class="sneaker-card">
+          <div class="sneaker-image">👟</div>
+          <h3 class="sneaker-name">Urban Legend</h3>
+          <div class="sneaker-tags">
+            <span class="tag lifestyle">Lifestyle</span>
+          </div>
+          <p class="sneaker-description">Statement piece that combines luxury materials with contemporary design.</p>
+          <div class="price-section">
+            <span class="price">$179.99</span>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
         </div>
-        <p class="method-description">Applies a function against an accumulator and each element to reduce to a single value.</p>
-        <div class="code-output">const sum = array.reduce((acc, curr) => acc + curr, 0);</div>
       </div>
+    </section>
 
-      <div class="method-card">
-        <h3 class="method-name">forEach()</h3>
-        <div class="method-tags">
-          <span class="tag">Iteration</span>
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stat-item">
+          <h3>50K+</h3>
+          <p>Happy Customers</p>
         </div>
-        <p class="method-description">Executes a provided function once for each array element.</p>
-        <div class="code-output">array.forEach(item => console.log(item));</div>
-      </div>
-
-      <div class="method-card">
-        <h3 class="method-name">slice()</h3>
-        <div class="method-tags">
-          <span class="tag returns-new">Returns New Array</span>
+        <div class="stat-item">
+          <h3>200+</h3>
+          <p>Sneaker Models</p>
         </div>
-        <p class="method-description">Returns a shallow copy of a portion of an array into a new array.</p>
-        <div class="code-output">const portion = array.slice(1, 3);</div>
-      </div>
-
-      <div class="method-card">
-        <h3 class="method-name">splice()</h3>
-        <div class="method-tags">
-          <span class="tag mutates">Mutates Array</span>
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Customer Support</p>
         </div>
-        <p class="method-description">Changes array content by removing/replacing elements and/or adding new elements.</p>
-        <div class="code-output">array.splice(index, howMany, ...elementsToAdd);</div>
+        <div class="stat-item">
+          <h3>Free</h3>
+          <p>Shipping Worldwide</p>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer>
-    <p>JavaScript Array Methods | Modern Web Development</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>StepUp</h4>
+        <p>Premium sneakers for every lifestyle</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 StepUp Sneaker Store. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
-    const output = document.getElementById('output');
+    // Simple cart functionality
+    let cart = [];
+    
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', function() {
+        const card = this.closest('.sneaker-card');
+        const name = card.querySelector('.sneaker-name').textContent;
+        const price = card.querySelector('.price').textContent;
+        
+        cart.push({ name, price });
+        
+        // Visual feedback
+        this.textContent = 'Added!';
+        this.style.backgroundColor = '#27ae60';
+        
+        setTimeout(() => {
+          this.textContent = 'Add to Cart';
+          this.style.backgroundColor = '';
+        }, 1500);
+        
+        console.log(`Added ${name} to cart. Cart now has ${cart.length} items.`);
+      });
+    });
 
-    // Initial array
-    let numbers = [1, 2, 3, 4, 5];
-    let result = 'Initial array: ' + JSON.stringify(numbers) + '\n\n';
+    // Smooth scrolling for navigation
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
 
-    // push() - Add item to end
-    numbers.push(6);
-    result += 'After push(6): ' + JSON.stringify(numbers) + '\n';
-
-    // pop() - Remove item from end
-    numbers.pop();
-    result += 'After pop(): ' + JSON.stringify(numbers) + '\n';
-
-    // unshift() - Add item to beginning
-    numbers.unshift(0);
-    result += 'After unshift(0): ' + JSON.stringify(numbers) + '\n';
-
-    // shift() - Remove item from beginning
-    numbers.shift();
-    result += 'After shift(): ' + JSON.stringify(numbers) + '\n';
-
-    // map() - Create a new array by multiplying each item by 2
-    const doubled = numbers.map(n => n * 2);
-    result += 'After map(n * 2): ' + JSON.stringify(doubled) + '\n';
-
-    // filter() - Filter out numbers greater than 2
-    const filtered = numbers.filter(n => n > 2);
-    result += 'After filter(n > 2): ' + JSON.stringify(filtered) + '\n';
-
-    // reduce() - Sum all numbers
-    const sum = numbers.reduce((acc, curr) => acc + curr, 0);
-    result += 'Sum using reduce(): ' + sum + '\n';
-
-    // forEach() - Log each number (also builds a string here)
-    let forEachOutput = '';
-    numbers.forEach(n => { forEachOutput += n + ' '; });
-    result += 'forEach(): ' + forEachOutput + '\n';
-
-    // slice() - Extract part of the array (from index 1 to 3)
-    const sliced = numbers.slice(1, 4);
-    result += 'After slice(1, 4): ' + JSON.stringify(sliced) + '\n';
-
-    // splice() - Remove and replace elements (start at index 2, remove 1, insert 99)
-    numbers.splice(2, 2, 99, 100);
-    result += 'After splice(2, 2, 99, 100): ' + JSON.stringify(numbers) + '\n';
-
-    // Display all results
-    output.textContent = result;
+    // CTA button action
+    document.querySelector('.cta-button').addEventListener('click', function() {
+      document.querySelector('#featured').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
   </script>
-
 </body>
 </html>
